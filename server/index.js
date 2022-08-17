@@ -14,6 +14,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const {
+    getHouses ,
+    deleteHouse ,
+    creatHouse ,
+    updateHouse
+} = ('./controller')
+
+
 
 const SERVER_PORT = 9009;
 app.listen(SERVER_PORT , () => console.log(`listening on port ${SERVER_PORT}`));
